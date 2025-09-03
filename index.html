@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labline Enterprises, Inc.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+        }
+
+        /* Define a custom animation for a subtle fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        /* Use a custom color from the requested hex code */
+        .text-custom-pink {
+            color: #e92462;
+        }
+        .bg-custom-pink {
+            background-color: #e92462;
+        }
+        .hover\:text-custom-pink:hover {
+            color: #e92462;
+        }
+
+        .footer-underline {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: #e92462;
+            margin-top: 4px;
+        }
+
+        /* Scroll-to-top button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+        }
+
+        /* Custom CSS for hiding/showing the navigation bar */
+        /* Adjusted for the new top bar height */
+        .header-hidden {
+            transform: translateY(-150%); /* Adjust to hide both top bar and header */
+            opacity: 0;
+        }
+
+        /* Specific styles for the Inquiry button */
+        .inquiry-btn {
+            background-color: #a05252; /* Example color from image */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100px; /* Adjust height as needed */
+            width: 120px; /* Adjust width as needed */
+            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); /* Creates the slanted left edge */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(-25px); /* Adjust to align with the image */
+        }
+        .inquiry-btn svg {
+            margin-bottom: 5px;
+        }
+
+        /* Ensure smooth transition for the inquiry button when header hides */
+        #topBar {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+        .topbar-hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800 bg-white">
+
+
+    <div id="topBar" class="relative bg-gray-100 py-2 text-sm text-gray-600 border-b border-gray-200 z-50 transition-all duration-300 ease-in-out">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 flex justify-start items-center space-x-6">
+            <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-custom-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <span>+63</span>
+            </div>
+            <div class="flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-custom-pink" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v3m18 0l-7.89 5.26a2 2 0 01-2.22 0L3 10" />
+                </svg>
+                <span>admin@lablineenterprises.com</span>
+            </div>
+            <div class="ml-auto">Social Media Logos</div>
+        </div>
+        <a href="#contact" class="inquiry-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M17 16l-4-4" />
+            </svg>
+            INQUIRY
+        </a>
+    </div>
+<!-- Exclusive Partner Announcement -->
+<section class="bg-white border-b border-gray-200 py-3 shadow-sm  relative animate-fadeIn">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-center space-x-4">
+        <div  class="text-sm md:text-base text-gray-700 font-bold">
+            We are an <span class="text-custom-pink font-semibold">exclusive partner</span> of 
+
+        </div>
+        <div style="display:inline;">
+            <img src="genvet logo.png" alt="Genvet Logo"  height="100px" width="100px"/>
+        </div>
+    </div>
+</section>
+    <header id="dynamicHeader" class="fixed top-8 left-0 w-full z-40 bg-white rounded-b-xl shadow-lg py-4 transition-all duration-300 ease-in-out">
+        <div class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <img src="Labline Logo.jpg" alt="Genvet-Bio, Inc. Logo" class="h-12 w-12 mr-4 rounded-full">
+                <div class="text-3xl font-bold text-custom-pink">
+                    <div style="color: #2d83c4 ; display: inline;">LAB</div>LINE <div style="color: rgb(81, 60, 60);display: inline;">ENTERPRISES INC</div> .
+                </div>
+            </div>
+            <nav class="space-x-4">
+                <a href="#about" class="text-gray-600 hover:text-custom-pink transition duration-300">About Us</a>
+                <a href="products.html" class="text-gray-600 hover:text-custom-pink transition duration-300">Products</a>
+                <a href="#services" class="text-gray-600 hover:text-custom-pink transition duration-300">Services</a>
+                <a href="#contact" class="text-gray-600 hover:text-custom-pink transition duration-300">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto p-4 md:p-8 pt-[140px]">
+        
+        <section class="mb-12 bg-white rounded-xl shadow-lg p-8 text-center animate-fadeIn" style="animation-delay: 0.2s;">
+            <h1 class="text-3xl md:text-4xl font-extrabold mb-4 text-custom-pink">Where after-sales service, solutions, and satisfaction happen</h1>
+            <p class="text-gray-600 md:text-lg max-w-4xl mx-auto mb-6">
+                We commit ourselves in providing Affordable Quality Veterinary Diagnostic products with utmost Aftersales Service
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="col-span-1 rounded-xl shadow-md overflow-hidden">
+                    <img src="https://placehold.co/600x400/e92462/ffffff?text=Lab+Image" alt="Technicians working in a lab" class="w-full h-full object-cover">
+                </div>
+                <div class="col-span-1 grid grid-cols-1 gap-4">
+                    <div class="rounded-xl shadow-md overflow-hidden">
+                        <img src="https://placehold.co/600x400/e92462/ffffff?text=VIMS" alt="Veterinary Information Management System" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-xl shadow-md overflow-hidden">
+                        <img src="https://placehold.co/600x400/e92462/ffffff?text=Lab+Image" alt="Technicians working on a conveyor belt" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="col-span-1 grid grid-cols-1 gap-4">
+                    <div class="rounded-xl shadow-md overflow-hidden">
+                        <img src="https://placehold.co/600x400/e92462/ffffff?text=Lab+Image" alt="Technicians working in a lab" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-xl shadow-md overflow-hidden">
+                        <img src="https://placehold.co/600x400/e92462/ffffff?text=Lab+Image" alt="Technicians working on a conveyor belt" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="mb-12 bg-white rounded-xl shadow-lg p-8 animate-fadeIn" style="animation-delay: 0.6s;">
+            <div class="w-full -mt-16 flex justify-center">
+                <img src="https://placehold.co/1200x200/ffffff/000000?text=Animal+Banner" alt="Image of animals looking over" class="w-full object-cover rounded-t-xl">
+            </div>
+
+            <h2 class="text-2xl md:text-3xl font-bold text-center mt-8 mb-8 text-custom-pink">Our Products</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
+                    <img src="" alt="VH30-Animal 3-part Hematology Analyzer" class="w-48 h-48 object-contain">
+                    <h3 class="font-semibold text-lg my-4 text-gray-700">VH30-Animal 3-part Hematology Analyzer</h3>
+                    <button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
+                        View More
+                    </button>
+                </div>
+
+                <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
+                    <img src="" alt="VH40-Animal 4-part Hematology Analyzer" class="w-48 h-48 object-contain">
+                    <h3 class="font-semibold text-lg my-4 text-gray-700">VH40-Animal 4-part Hematology Analyzer</h3>
+                    <button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
+                        View More
+                    </button>
+                </div>
+
+                <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
+                    <img src="" alt="VP20-POCT Chemistry Analyzer" class="w-48 h-48 object-contain">
+                    <h3 class="font-semibold text-lg my-4 text-gray-700">VP20-POCT Chemistry Analyzer</h3>
+                    <button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
+                        View More
+                    </button>
+                </div>
+
+                <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
+                    <img src="" alt="VH50-Animal 5-part Hematology Analyzer" class="w-48 h-48 object-contain">
+                    <h3 class="font-semibold text-lg my-4 text-gray-700">VH50-Animal 5-part Hematology Analyzer</h3>
+                    <button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
+                        View More
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-custom-pink animate-fadeIn" style="animation-delay: 1.4s;">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 animate-fadeIn" style="animation-delay: 1.6s;">
+                    <img src="https://placehold.co/600x400/e92462/ffffff?text=Technical+Support" alt="Technical Support" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-custom-pink">Technical Support</h3>
+                        <p class="text-gray-600 text-sm">We provide expert assistance and consultation to ensure the proper use of our products.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 animate-fadeIn" style="animation-delay: 1.8s;">
+                    <img src="https://placehold.co/600x400/e92462/ffffff?text=Maintenance+and+Repairs" alt="Training & Development" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-custom-pink">Maintenance and Repairs</h3>
+                        <p class="text-gray-600 text-sm">Comprehensive training sessions for your staff on the latest veterinary technology.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300 animate-fadeIn" style="animation-delay: 2s;">
+                    <img src="https://placehold.co/600x400/e92462/ffffff?text=Delivery+and+Installation" alt="After-Sales Care" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-custom-pink">Delivery and Installation</h3>
+                        <p class="text-gray-600 text-sm">Dedicated support to ensure the longevity and performance of our equipment.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="gallery" class="mb-12 bg-white rounded-xl shadow-lg p-8 text-center animate-fadeIn" style="animation-delay: 2.2s;">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-custom-pink">Our Gallery</h2>
+            <div class="flex items-center justify-center space-x-4">
+                <button id="prevBtn" class="p-3 text-custom-pink bg-white rounded-full shadow-lg hover:shadow-xl transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <div class="rounded-xl shadow-md overflow-hidden max-w-2xl w-full">
+                    <img id="galleryImage" src="https://placehold.co/1200x800/e92462/ffffff?text=Gallery+Image+1" alt="Gallery Image" class="w-full h-auto object-cover">
+                </div>
+                <button id="nextBtn" class="p-3 text-custom-pink bg-white rounded-full shadow-lg hover:shadow-xl transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-custom-pink text-white rounded-xl shadow-lg p-8 text-center animate-fadeIn" style="animation-delay: 3.6s;">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Contact Us</h2>
+            <p class="md:text-lg mb-6">
+                For inquiries, orders, or technical assistance, please call us or send an email.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+                <a href="mailto:info@lablineenterprises.com" class="bg-white text-custom-pink font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-200 transition duration-300">
+                    Send an Email
+                </a>
+                <a href="tel:+63" class="text-white border-2 border-white py-3 px-6 rounded-full hover:bg-white hover:text-custom-pink transition duration-300">
+                    Call Us
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <button id="scrollToTopBtn" class="scroll-to-top p-3 bg-custom-pink text-white rounded-full shadow-lg hover:shadow-xl transition duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <footer class="bg-gray-800 text-white py-12 px-4 md:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="font-semibold text-lg mb-4">Contact Us</h3>
+                <div class="footer-underline"></div>
+                <div class="mt-4 text-gray-400 space-y-2">
+                    <p>Address: #5 Gabby Isabelle Building, Larion Bajo, Tuguegarao City, Cagayan, Philippines</p>
+                    <p>TEL: +63</p>
+                    <p>E-mail:info@lablineenterprises.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bg-gray-900 text-center text-gray-500 text-sm py-4">
+        LABLINE© All Rights Reserved.
+    </div>
+
+    <script>
+        // Dynamic Header
+        const topBar = document.getElementById('topBar');
+        const header = document.getElementById('dynamicHeader');
+        const scrollThreshold = 50; // Distance to scroll before header appears
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > scrollThreshold) {
+                topBar.classList.add('topbar-hidden');
+                header.classList.remove('header-hidden');
+                header.classList.add('shadow-xl', 'bg-white', 'top-0'); // Add classes and fix to top
+                header.classList.remove('top-8'); // Remove initial top offset
+            } else {
+                topBar.classList.remove('topbar-hidden');
+                header.classList.add('header-hidden');
+                header.classList.remove('shadow-xl', 'bg-white', 'top-0'); // Remove classes and fix to top
+                header.classList.add('top-8'); // Restore initial top offset
+            }
+        });
+
+        // Image Gallery
+        document.addEventListener('DOMContentLoaded', () => {
+            const galleryImage = document.getElementById('galleryImage');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const images = [
+                'https://placehold.co/1200x800/e92462/ffffff?text=Gallery+Image+1',
+                'https://placehold.co/1200x800/e92462/ffffff?text=Gallery+Image+2',
+                'https://placehold.co/1200x800/e92462/ffffff?text=Gallery+Image+3',
+                'https://placehold.co/1200x800/e92462/ffffff?text=Gallery+Image+4',
+                'https://placehold.co/1200x800/e92462/ffffff?text=Gallery+Image+5',
+                'https://placehold.co/1200x800/e92462/ffffff?text=Gallery+Image+6'
+            ];
+            let currentIndex = 0;
+
+            function updateImage() {
+                galleryImage.src = images[currentIndex];
+            }
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                updateImage();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateImage();
+            });
+
+            updateImage(); // Initial image load
+        });
+
+        // Scroll-to-top button functionality
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        window.addEventListener("scroll", () => {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        });
+
+        scrollToTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
+</body>
+</html>
