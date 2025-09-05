@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Labline Enterprises - Products.</title>
+    <title>Product Details - Genvet-Bio, Inc.</title>
     <!-- Use Tailwind CSS for modern and responsive styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -101,8 +101,9 @@
         }
     </style>
 </head>
-<body class="antialiased text-gray-800 bg-white">
+<body class="bg-gray-50 text-gray-800">
 
+    <!-- Header Section (Copied from index.html and products.html) -->
     <div id="topBar" class="relative bg-gray-100 py-2 text-sm text-gray-600 border-b border-gray-200 z-50 transition-all duration-300 ease-in-out">
         <div class="container mx-auto px-6 flex justify-between items-center text-sm text-gray-600">
             <div>
@@ -126,91 +127,132 @@
             </div>
         </div>
     </div>
-     <header id="dynamicHeader" class="fixed top-8 left-0 w-full z-40 bg-white rounded-b-xl shadow-lg py-4 transition-all duration-300 ease-in-out">
+
+    <header id="dynamicHeader" class="fixed top-8 left-0 w-full z-40 bg-white rounded-b-xl shadow-lg py-4 transition-all duration-300 ease-in-out">
         <div class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center">
             <div class="flex items-center mb-4 md:mb-0">
-                <img src="Labline Logo.jpg" alt="Labline Logo" class="h-12 w-12 mr-4 rounded-full">
-                <div class="text-3xl font-bold text-custom-pink"><a href="index.html"><div style="color: #2d83c4 ; display: inline;">LAB</div>LINE <div style="color: rgb(81, 60, 60);display: inline;">ENTERPRISES INC</div> .</a>
-                    
+                <img src="/Labline Logo.jpg" alt="Labline. Logo" class="h-12 w-12 mr-4 rounded-full">
+                <div class="text-3xl font-bold text-custom-pink"><a href="/index.html"><div style="color: #2d83c4 ; display: inline;">LAB</div>LINE <div style="color: rgb(81, 60, 60);display: inline;">ENTERPRISES INC</div> .</a>
                 </div>
             </div>
 
         </div>
     </header>
-    <!-- Main Content -->
-    <div class="max-w-7xl mb mx-auto p-4 md:p-12 pt-24">
-        <section class="mb-12">
-            <!-- Products Heading and Breadcrumb -->
-            <div class="flex flex-col items-center text-center mb-8">
+
+    <main class="pt-24 md:pt-36 lg:pt-24">
+        <div class="flex flex-col items-center text-center mb-8">
                 <h1 class="text-3xl md:text-4xl font-extrabold mb-2 text-custom-pink">PRODUCTS</h1>
                 <p class="text-gray-500">
-                    <a href="index.html" class="hover:underline">Home</a> > <span class="underline"> Products</span>
+                    <a href="/" class="hover:underline">Home</a> <span> > </span>
+                    <a href="/products/" class="hover:underline">Products</a> > <span class="underline">  VH30 </span>
                 </p>
             </div>
+        <!-- Product Details Section -->
+        <section class="container mx-auto px-6 py-12 md:py-16 lg:py-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-start">
+                <!-- Product Image -->
+                <div class="flex justify-center items-center">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeIn max-w-lg w-full">
+                        <img src="/productimg/VH30.png" 
+                             alt="Product Image" 
+                             class="w-full h-auto object-cover rounded-xl"
+                             onerror="this.src='https://placehold.co/1200x800/d5d5d5/333333?text=Image+Unavailable';">
+                    </div>
+                </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
-                 
-                <div class="col-span-1 bg-white rounded-xl shadow-lg p-6">
-                    <h2 class="font-bold text-lg mb-2 text-custom-pink">Products</h2>
-                    <div class="footer-underline mb-4"></div>
-                    <ul class="space-y-2 text-gray-600">
-                        <li><a href="#" class="hover:text-custom-pink">Machines</a></li>
-                        <li><a href="#" class="hover:text-custom-pink">Rotors</a></li>
-                        <li><a href="#" class="hover:text-custom-pink">Test Kits</a></li>
-                        <li><a href="#" class="hover:text-custom-pink">Reagents</a></li>
+
+                <!-- Product Details and Specifications -->
+                <div class="animate-fadeIn" style="animation-delay: 0.2s;">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                        VH30-Animal 3-part Hematology Analyzer
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-6">
+                        This is our animal auto 3-Part Hematology Analyzer VH30, results 26 parameters+3 histogram in 60 seconds.
+                        19 species available and the reference range have passed clinical test and pre-edited in the system, 
+                        For neonatal pups, viral infections, sick do
+                    </p>
+
+                    <h2 class="text-2xl font-semibold text-gray-900 mb-4">Product Specifications</h2>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-custom-pink mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM8 11.5a1.5 1.5 0 113 0v.5a1.5 1.5 0 01-3 0V11.5z"></path>
+                            </svg>
+                            <span class="font-semibold text-gray-800">Model Number:</span> GENVET VH30
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-custom-pink mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12a1 1 0 100-2 1 1 0 000 2z"></path>
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-5-8a5 5 0 1110 0 5 5 0 01-10 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="font-semibold text-gray-800">Dimensions (LxWxH):</span> 430mm×280mm×435mm
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-custom-pink mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M17 12a5 5 0 01-5 5v2a2 2 0 01-2 2h-1a2 2 0 01-2-2v-2a5 5 0 01-5-5V8a5 5 0 015-5h1a2 2 0 012 2v2a5 5 0 015 5v4a1 1 0 01-2 0V12z"></path>
+                            </svg>
+                            <span class="font-semibold text-gray-800">Throughput: </span> 60 samples per hour
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-5 h-5 text-custom-pink mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M12 18h2a2 2 0 002-2v-3.5a1.5 1.5 0 011.5-1.5h.5a1 1 0 001-1V9a1 1 0 00-1-1h-.5a1.5 1.5 0 01-1.5-1.5V4a2 2 0 00-2-2h-2a2 2 0 00-2 2v3.5A1.5 1.5 0 017.5 9H7a1 1 0 00-1 1v1a1 1 0 001 1h.5a1.5 1.5 0 011.5 1.5V16a2 2 0 002 2z"></path>
+                            </svg>
+                            <span class="font-semibold text-gray-800">Weight:</span> 17.5 KG
+                        </li>
                     </ul>
 
-                    <h2 class="font-bold text-lg mt-8 mb-2 text-custom-pink">Hot Products</h2>
-                    <div class="footer-underline mb-4"></div>
-                    <div class="flex items-center space-x-4 p-2 rounded-xl bg-gray-50">
-                        <img src="/productimg/VH30.png" alt="VH30-Animal 3-part Hematology Analyzer" class="w-12 h-12 object-contain rounded">
-                        <span class="text-sm font-semibold text-gray-700">VH30-Animal 3-part Hematology Analyzer</span>
+                    <div class="mt-8">
+                        <a href="#" class="bg-custom-pink text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-opacity-80 transition-colors duration-300">
+                            Request a Quote
+                        </a>
                     </div>
-                </div> 
+                </div>
                 
+            </div>
+            
+        </section>
 
-                <!-- Right Product Grid -->
-                <div class="col-span-1 lg:col-span-3">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Product Card 1 -->
-                        <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
-                            <img src="/productimg/VH30.png" alt="VH30-Animal 3-part Hematology Analyzer" class="w-48 h-48 object-contain">
-                            <h3 class="font-semibold text-lg my-4 text-gray-700">VH30-Animal 3-part Hematology Analyzer</h3>
-                           <a href="/productpages/Vh30.html"> <button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
-                                View More
-                            </button></a>
-                        </div>
-                        <!-- Product Card 2 -->
-                        <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
-                            <img src="https://placehold.co/300x300/e92462/ffffff?text=VP20" alt="VP20-POCT Chemistry Analyzer" class="w-48 h-48 object-contain">
-                            <h3 class="font-semibold text-lg my-4 text-gray-700">VP20-POCT Chemistry Analyzer</h3>
-                            <button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
-                                View More
-                            </button>
-                        </div>
-                        <!-- Product Card 3 -->
-                        <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
-                            <img src="https://placehold.co/300x300/e92462/ffffff?text=VU10" alt="VU10-Urine Analyzer" class="w-48 h-48 object-contain">
-                            <h3 class="font-semibold text-lg my-4 text-gray-700">VU10-Urine Analyzer</h3>
-                            <button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
-                                View More
-                            </button>
-                        </div>
-                    </div>
+        <!-- Related Products Section -->
+        <section class="container mx-auto px-6 py-12 md:py-16 lg:py-20">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Related Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Related Product Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-4 text-center animate-fadeIn">
+                    <img src="https://placehold.co/400x300/e0e0e0/333333?text=Related+Product+1" alt="Related Product 1" class="rounded-lg mb-4">
+                    <h3 class="font-bold text-lg text-gray-900 mb-1">Microscope 500x</h3>
+                    <p class="text-sm text-gray-600">A high-magnification microscope for detailed analysis.</p>
+                </div>
+                <!-- Related Product Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-4 text-center animate-fadeIn" style="animation-delay: 0.2s;">
+                    <img src="https://placehold.co/400x300/e0e0e0/333333?text=Related+Product+2" alt="Related Product 2" class="rounded-lg mb-4">
+                    <h3 class="font-bold text-lg text-gray-900 mb-1">Stirring Plate 200</h3>
+                    <p class="text-sm text-gray-600">Magnetic stirring plate with adjustable speed control.</p>
+                </div>
+                <!-- Related Product Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-4 text-center animate-fadeIn" style="animation-delay: 0.4s;">
+                    <img src="https://placehold.co/400x300/e0e0e0/333333?text=Related+Product+3" alt="Related Product 3" class="rounded-lg mb-4">
+                    <h3 class="font-bold text-lg text-gray-900 mb-1">Digital Scale</h3>
+                    <p class="text-sm text-gray-600">Accurate digital scale for precise measurements.</p>
+                </div>
+                 <!-- Related Product Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg p-4 text-center animate-fadeIn" style="animation-delay: 0.6s;">
+                    <img src="https://placehold.co/400x300/e0e0e0/333333?text=Related+Product+4" alt="Related Product 4" class="rounded-lg mb-4">
+                    <h3 class="font-bold text-lg text-gray-900 mb-1">Pipette Set</h3>
+                    <p class="text-sm text-gray-600">A full set of adjustable volume pipettes for lab work.</p>
                 </div>
             </div>
         </section>
-    </div>
+    </main>
 
-    <!-- Scroll-to-top button -->
-    <button id="scrollToTopBtn" class="scroll-to-top p-3 bg-custom-pink text-white rounded-full shadow-lg hover:shadow-xl transition duration-300">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 p-3 bg-custom-pink text-white rounded-full shadow-lg transition-all duration-300 opacity-0 transform translate-y-4 hover:bg-opacity-80" style="display: none; transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;">
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
     </button>
 
-    <!-- Footer -->
-     <footer class="bg-gray-900 text-gray-400 py-12">
+    <!-- Footer Section (Copied from index.html) -->
+<footer class="bg-gray-900 text-gray-400 py-12">
         <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Footer Column 1 -->
             <div>
@@ -264,8 +306,7 @@
             &copy; 2025 Labline Enterprises, Inc. All rights reserved.
         </div>
     </footer>
-    
-    <!-- JavaScript for scroll-to-top button -->
+
     <script>
          const topBar = document.getElementById('topBar');
         const header = document.getElementById('dynamicHeader');
