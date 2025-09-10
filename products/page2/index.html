@@ -155,10 +155,10 @@
                     <h2 class="font-bold text-lg mb-2 text-custom-pink">Products</h2>
                     <div class="footer-underline mb-4"></div>
                     <ul class="space-y-2 text-gray-600">
-                        <li><a href="/products/page1/" class="hover:text-custom-pink">All</a></li>
+                        <li><a href="/products/page1/" class="text-custom-pink">All</a></li>
                         <li><a href="/products/Machines/" class="hover:text-custom-pink">Machines</a></li>
                         <li><a href="#" class="hover:text-custom-pink">Rotors</a></li>
-                        <li><a href="/products/Test Kits/" class="text-custom-pink">Test Kits</a></li>
+                        <li><a href="/products/Test Kits/" class="hover:text-custom-pink">Test Kits</a></li>
                         <li><a href="#" class="hover:text-custom-pink">Reagents</a></li>
                     </ul>
 
@@ -175,34 +175,6 @@
                 <div class="col-span-1 lg:col-span-3">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <!-- Product Card 1 -->
-                        <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
-                            <img src="http://www.quickingbio.com/data/watermark/20221216/639c11d3a1a97.jpg" alt="CPV+CCV Ag Combined Rapid Test" class="w-48 h-48 object-contain">
-                            <h3 class="font-semibold text-lg my-4 text-gray-700">CPV+CCV Ag Combined Rapid Test（W81066）</h3>
-                            <a href="/products/Test Kits/CPV+CCV Ag Combined Rapid Test（W81066）/"><button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
-                                View Details
-                            </button></a>
-                        </div>
-                        <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
-                            <img src="http://www.quickingbio.com/data/watermark/20221216/639c119a50836.jpg" alt="CPV+CCV Ag Combined Rapid Test" class="w-48 h-48 object-contain">
-                            <h3 class="font-semibold text-lg my-4 text-gray-700">CPV Ag Rapid Test (W81006)</h3>
-                            <a href="/products/Test Kits/CPV Ag Rapid Test (W81006)/"><button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
-                                View Details
-                            </button></a>
-                        </div>
-                        <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
-                            <img src="http://www.quickingbio.com/data/watermark/20221216/639c119a50836.jpg" alt="CPV+CCV Ag Combined Rapid Test" class="w-48 h-48 object-contain">
-                            <h3 class="font-semibold text-lg my-4 text-gray-700">CDV Ag Rapid Test (W81005)</h3>
-                            <a href="/products/Test Kits/CDV Ag Rapid Test (W81005)/"><button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
-                                View Details
-                            </button></a>
-                        </div>
-                        <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
-                            <img src="http://www.quickingbio.com/data/watermark/20221216/639bf70e1ed47.jpg" alt="CPV+CCV Ag Combined Rapid Test" class="w-48 h-48 object-contain">
-                            <h3 class="font-semibold text-lg my-4 text-gray-700">CDV+CPV Ag Combined Rapid Test(W81200)</h3>
-                            <a href="/products/Test Kits/CDV+CPV Ag Combined Rapid Test(W81200)/"><button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
-                                View Details
-                            </button></a>
-                        </div>
                         <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
                             <img src="http://www.quickingbio.com/data/watermark/20221216/639c11bf9cb6a.jpg" alt="CPV+CCV Ag Combined Rapid Test" class="w-48 h-48 object-contain">
                             <h3 class="font-semibold text-lg my-4 text-gray-700">CHW Ag Rapid Test (W81011)</h3>
@@ -243,7 +215,15 @@
             </div>
         </section>
     </div>
-
+<section class="flex justify-center mt-12 animate-fadeIn">
+        <nav class="flex items-center space-x-2" aria-label="Pagination">
+            <div id="pageNumbers" class="flex space-x-2">
+                 <a href="/products/page1/" class="hover:text-custom-pink px-3 bpy-1 md:px-4 md:py-2 rounded-full font-medium border border-gray-300 text-gray-700 hover:bg-gray-200 transition-colors duration-200">1</a>
+                 <a href="/products/page2/" class="text-custom-pink px-3 bpy-1 md:px-4 md:py-2 rounded-full font-medium border border-gray-300 bg-gray-200 hover:bg-gray-300 transition-colors duration-200">2</a>
+                 <a href="/products/page3/" class="hover:text-custom-pink px-3 bpy-1 md:px-4 md:py-2 rounded-full font-medium border border-gray-300 text-gray-700 hover:bg-gray-200 transition-colors duration-200">3</a>
+            </div>
+        </nav>
+    </section>
     <!-- Scroll-to-top button -->
     <button id="scrollToTopBtn" class="scroll-to-top p-3 bg-custom-pink text-white rounded-full shadow-lg hover:shadow-xl transition duration-300">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

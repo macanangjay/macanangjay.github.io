@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/Labline Logo.jpg">
-    <title>Labline Enterprises, Inc.</title>
+    <title>Labline Enterprises, Inc. - Products (Page 1)</title>
     <!-- Use Tailwind CSS for modern and responsive styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -67,31 +67,6 @@
             opacity: 0;
         }
 
-        /* Specific styles for the Inquiry button */
-        .inquiry-btn {
-            background-color: #a05252; /* Example color from image */
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 100px; /* Adjust height as needed */
-            width: 120px; /* Adjust width as needed */
-            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); /* Creates the slanted left edge */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            transform: translateY(-25px); /* Adjust to align with the image */
-        }
-        .inquiry-btn svg {
-            margin-bottom: 5px;
-        }
-
         /* Ensure smooth transition for the inquiry button when header hides */
         #topBar {
             transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -104,6 +79,7 @@
 </head>
 <body class="antialiased text-gray-800 bg-white">
 
+    <!-- Header Section (Copied from index.html and products.html) -->
     <div id="topBar" class="relative bg-gray-100 py-2 text-sm text-gray-600 border-b border-gray-200 z-50 transition-all duration-300 ease-in-out">
         <div class="container mx-auto px-6 flex justify-between items-center text-sm text-gray-600">
             <div>
@@ -155,7 +131,7 @@
                     <h2 class="font-bold text-lg mb-2 text-custom-pink">Products</h2>
                     <div class="footer-underline mb-4"></div>
                     <ul class="space-y-2 text-gray-600">
-                        <li><a href="/products/" class="text-custom-pink">All</a></li>
+                        <li><a href="/products/page1/" class="text-custom-pink">All</a></li>
                         <li><a href="/products/Machines/" class="hover:text-custom-pink">Machines</a></li>
                         <li><a href="#" class="hover:text-custom-pink">Rotors</a></li>
                         <li><a href="/products/Test Kits/" class="hover:text-custom-pink">Test Kits</a></li>
@@ -240,53 +216,22 @@
                                 View Details
                             </button></a>
                         </div>
-                        <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
-                            <img src="http://www.quickingbio.com/data/watermark/20221216/639c11bf9cb6a.jpg" alt="CPV+CCV Ag Combined Rapid Test" class="w-48 h-48 object-contain">
-                            <h3 class="font-semibold text-lg my-4 text-gray-700">CHW Ag Rapid Test (W81011)</h3>
-                            <a href="/products/Test Kits/CHW Ag Rapid Test（W81011）/"><button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
-                                View Details
-                            </button></a>
-                        </div>
-                        <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
-                            <img src="http://www.quickingbio.com/data/watermark/20250828/68aff1e589bf5.jpg" alt="CPV+CCV Ag Combined Rapid Test" class="w-48 h-48 object-contain">
-                            <h3 class="font-semibold text-lg my-4 text-gray-700">EHR + LYM + ANA Ab + CHW Ag Rapid Test (W81166)</h3>
-                            <a href="/products/Test Kits/EHR + LYM + ANA Ab + CHW Ag Rapid Test (W81166)/"><button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
-                                View Details
-                            </button></a>
-                        </div>
-                        <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
-                            <img src="http://www.quickingbio.com/data/watermark/20221216/639c15cf100d5.jpg" alt="CPV+CCV Ag Combined Rapid Test" class="w-48 h-48 object-contain">
-                            <h3 class="font-semibold text-lg my-4 text-gray-700">E.canis Ab Rapid Test (W81132)</h3>
-                            <a href="/products/Test Kits/E.canis Ab Rapid Test （W81132)/"><button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
-                                View Details
-                            </button></a>
-                        </div>
-                        <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
-                            <img src="http://www.quickingbio.com/data/watermark/20221222/63a425b76ec85.jpg" alt="CPV+CCV Ag Combined Rapid Test" class="w-48 h-48 object-contain">
-                            <h3 class="font-semibold text-lg my-4 text-gray-700">Rabies Virus Ag Rapid Test (W81013)</h3>
-                            <a href="/products/Test Kits/Rabies Virus Ag Rapid Test (W81013)/"><button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
-                                View Details
-                            </button></a>
-                        </div>
-                        <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
-                            <img src="http://www.quickingbio.com/data/watermark/20221216/639c11eaa420a.jpg" alt="CPV+CCV Ag Combined Rapid Test" class="w-48 h-48 object-contain">
-                            <h3 class="font-semibold text-lg my-4 text-gray-700">CPV+CCV+Giardia Ag Triple Rapid Test (W81018)</h3>
-                            <a href="/products/Test Kits/CPV+CCV+Giardia Ag Triple Rapid Test (W81018)/"><button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
-                                View Details
-                            </button></a>
-                        </div>
-                        <div class="flex flex-col items-center text-center p-4 bg-white rounded-xl transform hover:scale-105 transition duration-300 shadow-lg">
-                            <img src="/productimg/MNCHIP HC PLUS.png" alt="CPV+CCV Ag Combined Rapid Test" class="w-48 h-48 object-contain">
-                            <h3 class="font-semibold text-lg my-4 text-gray-700">CV5 Health Checking Plus</h3>
-                            <a href="/products/Rotors/CV5 Health Checking Plus/"><button class="bg-custom-pink text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300">
-                                View Details
-                            </button></a>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
+
+    <!-- Pagination -->
+<section class="flex justify-center mt-12 animate-fadeIn">
+        <nav class="flex items-center space-x-2" aria-label="Pagination">
+            <div id="pageNumbers" class="flex space-x-2">
+                <a href="/products/page1/" class="text-custom-pink px-3 bpy-1 md:px-4 md:py-2 rounded-full font-medium border border-gray-300 bg-gray-200 hover:bg-gray-300 transition-colors duration-200">1</a>
+                 <a href="/products/page2/" class="hover:text-custom-pink px-3 bpy-1 md:px-4 md:py-2 rounded-full font-medium border border-gray-300 text-gray-700 hover:bg-gray-200 transition-colors duration-200">2</a>
+                 <a href="/products/page3/" class="hover:text-custom-pink px-3 bpy-1 md:px-4 md:py-2 rounded-full font-medium border border-gray-300 text-gray-700 hover:bg-gray-200 transition-colors duration-200">3</a>
+            </div>
+        </nav>
+    </section>
 
     <!-- Scroll-to-top button -->
     <button id="scrollToTopBtn" class="scroll-to-top p-3 bg-custom-pink text-white rounded-full shadow-lg hover:shadow-xl transition duration-300">
@@ -306,7 +251,7 @@
                 </p>
             </div>
             
-<div></div>
+            <div></div>
 
 
             <!-- Footer Column 3 -->
