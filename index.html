@@ -150,7 +150,6 @@
                 <a href="/products/page1/" class="text-gray-600 hover:text-custom-pink transition duration-300">Products</a>
                 <a href="#mission-vision" class="text-gray-600 hover:text-custom-pink transition duration-300 smooth-scroll">Mission & Vision</a>
                 <a href="#services" class="text-gray-600 hover:text-custom-pink transition duration-300 smooth-scroll">Services</a>
-                <a href="#gallery" class="text-gray-600 hover:text-custom-pink transition duration-300 smooth-scroll">Gallery</a>
                 <a href="#contact" class="text-gray-600 hover:text-custom-pink transition duration-300 smooth-scroll">Contact Us</a>
             </nav>
         </div>
@@ -262,11 +261,8 @@
             <a href="/products/page1/"><div style="margin-top: 30px;" class="flex items-center justify-center" >
                     <button class="bg-custom-pink text-white font-extrabold py-4 px-10 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300 " >View All Products</button>
             </div></a>
-            <div class="mb-12"></div>
         </section>
 
-            <div class="mb-12"></div>
-            <div class="mb-12"></div>
     <section id="gallery" class="mb-12 bg-white rounded-xl shadow-lg p-8 text-center animate-fadeIn" style="animation-delay: 2.2s;">
     <h2 class="text-4xl md:text-3xl font-extrabold text-center mb-8 text-custom-pink">Our Gallery</h2>
     <div class="relative w-full max-w-3xl mx-auto">
@@ -284,7 +280,6 @@
             </svg>
         </button>
     </div>
-    
 </section>
 
         <section id="contact" class="bg-custom-pink text-white rounded-xl shadow-lg p-8 text-center animate-fadeIn" style="animation-delay: 3.6s;">
@@ -522,7 +517,7 @@
             updateImage(); // Initial image load
         });
 
-        // MODIFIED: Smooth scrolling for navigation links
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -537,13 +532,11 @@
             });
         });
 
-        // MODIFIED: Automatic scroll to next/previous section
+        // Automatic scroll to next/previous section
         const sections = document.querySelectorAll('section');
         let isScrolling = false;
         let activeSectionIndex = 0;
-        let scrollAccumulator = 0;
-        const SCROLL_THRESHOLD = 0; // Pixels to scroll before activating the snap
-
+        
         // Find the index of the currently visible section on load
         const findActiveSection = () => {
             let currentActiveIndex = 0;
@@ -567,33 +560,27 @@
             if (isScrolling) {
                 return;
             }
-            
-            scrollAccumulator += e.deltaY;
+        
+            isScrolling = true;
+            let direction = e.deltaY > 0 ? 1 : -1;
+            let nextIndex = activeSectionIndex + direction;
+        
+            if (nextIndex >= 0 && nextIndex < sections.length) {
+                const targetSection = sections[nextIndex];
+                const headerHeight = document.getElementById('dynamicHeader').offsetHeight;
+                const targetPosition = targetSection.offsetTop - headerHeight;
 
-            if (Math.abs(scrollAccumulator) >= SCROLL_THRESHOLD) {
-                isScrolling = true;
-                let direction = scrollAccumulator > 0 ? 1 : -1;
-                let nextIndex = activeSectionIndex + direction;
-            
-                if (nextIndex >= 0 && nextIndex < sections.length) {
-                    const targetSection = sections[nextIndex];
-                    const headerHeight = document.getElementById('dynamicHeader').offsetHeight;
-                    const targetPosition = targetSection.offsetTop - headerHeight;
-
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                    activeSectionIndex = nextIndex;
-                }
-                
-                scrollAccumulator = 0; // Reset accumulator after a successful scroll
-
-                setTimeout(() => {
-                    isScrolling = false;
-                    findActiveSection(); // Re-check the active section after the scroll animation ends
-                }, 1000); // 1-second timeout to prevent multiple scrolls
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                activeSectionIndex = nextIndex;
             }
+        
+            setTimeout(() => {
+                isScrolling = false;
+                findActiveSection(); // Re-check the active section after the scroll animation ends
+            }, 1000); // 1-second timeout to prevent multiple scrolls
         });
 
         // Scroll-to-top button functionality
