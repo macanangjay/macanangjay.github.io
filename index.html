@@ -532,56 +532,7 @@
             });
         });
 
-        // Automatic scroll to next/previous section
-        const sections = document.querySelectorAll('section');
-        let isScrolling = false;
-        let activeSectionIndex = 0;
-        
-        // Find the index of the currently visible section on load
-        const findActiveSection = () => {
-            let currentActiveIndex = 0;
-            let minDistance = Infinity;
-            const headerHeight = document.getElementById('dynamicHeader').offsetHeight;
-            sections.forEach((section, index) => {
-                const rect = section.getBoundingClientRect();
-                const adjustedDistance = Math.abs(rect.top - headerHeight);
-                if (adjustedDistance < minDistance) {
-                    minDistance = adjustedDistance;
-                    currentActiveIndex = index;
-                }
-            });
-            activeSectionIndex = currentActiveIndex;
-        };
-        
-        // Initial check to set the active section
-        findActiveSection();
-        
-        window.addEventListener('wheel', (e) => {
-            if (isScrolling) {
-                return;
-            }
-        
-            isScrolling = true;
-            let direction = e.deltaY > 0 ? 1 : -1;
-            let nextIndex = activeSectionIndex + direction;
-        
-            if (nextIndex >= 0 && nextIndex < sections.length) {
-                const targetSection = sections[nextIndex];
-                const headerHeight = document.getElementById('dynamicHeader').offsetHeight;
-                const targetPosition = targetSection.offsetTop - headerHeight;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-                activeSectionIndex = nextIndex;
-            }
-        
-            setTimeout(() => {
-                isScrolling = false;
-                findActiveSection(); // Re-check the active section after the scroll animation ends
-            }, 1000); // 1-second timeout to prevent multiple scrolls
-        });
+       
 
         // Scroll-to-top button functionality
         const scrollToTopBtn = document.getElementById("scrollToTopBtn");
